@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddla Vamshi — Entrepreneur & Digital Creator</title>
+    <meta name="description" content="Buddla Vamshi — Entrepreneur, digital creator and AI automation practitioner. Explore projects, achievements and contact via email or WhatsApp." />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Mono:wght@400;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a0a0a;
+            --accent: #ff3366;
+            --accent-secondary: #00d4ff;
+            --bg: #fafafa;
+            --text: #1a1a1a;
+            --text-secondary: #666;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 51, 102, 0.03) 2px, rgba(255, 51, 102, 0.03) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 212, 255, 0.03) 2px, rgba(0, 212, 255, 0.03) 4px);
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 10vw, 8rem);
+            color: white;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            line-height: 0.9;
+            text-shadow: 0 0 40px rgba(255, 51, 102, 0.3);
+        }
+
+        .hero .subtitle {
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            color: var(--accent-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero .tagline {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 2px solid;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn-primary:hover::before {
+            left: 0;
+        }
+
+        .btn-primary:hover {
+            color: white;
+        }
+
+        .btn-secondary {
+            color: var(--accent-secondary);
+            border-color: var(--accent-secondary);
+        }
+
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-secondary);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn-secondary:hover::before {
+            left: 0;
+        }
+
+        .btn-secondary:hover {
+            color: white;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 3rem);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            text-transform: none;
+            letter-spacing: normal;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-box {
+            padding: 2rem;
+            background: var(--bg);
+            border-left: 4px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateX(10px);
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.5rem;
+        }
+
+        /* Experience Timeline */
+        .experience {
+            background: var(--primary);
+            color: white;
+        }
+
+        .experience .section-title {
+            color: white;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent), var(--accent-secondary));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+            animation: fadeInLeft 0.6s ease-out both;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px var(--primary), 0 0 0 6px var(--accent);
+        }
+
+        .timeline-year {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+            text-transform: none;
+        }
+
+        .timeline-company {
+            font-size: 1.1rem;
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-desc {
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .timeline-desc ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .timeline-desc li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Projects Grid */
+        .projects {
+            background: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg);
+            padding: 2.5rem;
+            border-top: 4px solid var(--accent);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 51, 102, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            text-transform: none;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            padding: 0.4rem 0.8rem;
+            background: white;
+            border: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: var(--bg);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-left: 4px solid var(--accent-secondary);
+        }
+
+        .skill-category h3 {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-transform: none;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-item {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Education Section */
+        .education {
+            background: white;
+        }
+
+        .education-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: var(--bg);
+            padding: 2.5rem;
+            border-left: 6px solid var(--accent);
+            position: relative;
+        }
+
+        .education-card::before {
+            content: '🎓';
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 3rem;
+            opacity: 0.1;
+        }
+
+        .education-degree {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            text-transform: none;
+        }
+
+        .education-institution {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .education-duration {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-details {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: var(--accent-secondary);
+        }
+
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #666;
+            text-align: center;
+            padding: 2rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        .scroll-indicator::before {
+            content: '↓';
+            font-size: 2rem;
+            color: var(--accent-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        /* Achievements */
+        .achievements {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            color: white;
+        }
+
+        .achievements .section-title {
+            color: white;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .achievement-year {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-title {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            line-height: 1.25;
+            font-weight: 600;
+            text-transform: none;
+        }
+
+        .achievement-desc {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Buddla Vamshi</h1>
+            <p class="subtitle">Entrepreneur | Digital Creator | AI & Automation</p>
+            <p class="tagline">I build efficient workflows, create engaging content, and help teams scale with automation.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="https://wa.me/919205304305" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Message on WhatsApp</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a <span class="highlight">17-year-old entrepreneur and digital creator</span> from Ghaziabad, India, with a passion for business, technology, and innovation.</p>
+                <p>From managing family business operations and accounting at <span class="highlight">Radha Enterprises</span> to creating content across <span class="highlight">three monetized YouTube channels</span>, I believe in learning through hands-on experience.</p>
+                <p>Currently pursuing entrepreneurship at the <span class="highlight">Institute of Venture Building (IVB)</span> while completing my undergraduate degree online, I've reduced AI video creation time from 4 days to just 30-45 minutes through continuous experimentation and learning.</p>
+                <p>My journey spans from industrial machine operations to digital marketing, from Python programming to AI automation—always driven by curiosity and the desire to create impact.</p>
+            </div>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">YouTube Channels</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">Time Reduction in AI Video Creation</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Business Exposure</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">AI & Automation Tools Mastered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2024 – Present</div>
+                <h3 class="timeline-title">Managing Director & Accountant</h3>
+                <p class="timeline-company">Radha Enterprises</p>
+                <div class="timeline-desc">
+                    <p>Leading day-to-day business operations and coordinating overall activities across the organization.</p>
+                    <ul>
+                        <li>Managing comprehensive accounting including account books, invoices, and expense tracking</li>
+                        <li>Implemented automation-based invoice and documentation systems, improving efficiency by 60%</li>
+                        <li>Coordinating with clients, vendors, and internal operations teams</li>
+                        <li>Gained operational exposure to manufacturing and service-related workflows</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2019 – Present</div>
+                <h3 class="timeline-title">Accounts & Operations Support</h3>
+                <p class="timeline-company">Shre Soni Eng. Works (Automobile Components Manufacturing)</p>
+                <div class="timeline-desc">
+                    <p>Managing accounting and supporting operations in a family automobile components manufacturing business.</p>
+                    <ul>
+                        <li>Maintained manual and digital accounting records with daily entries and expense tracking</li>
+                        <li>Prepared and verified bills, purchase records, and documentation</li>
+                        <li>Learned operational flow and safety practices of industrial machines (Press, Lathe, Traub, Milling, Spring Cutter)</li>
+                        <li>Developed understanding of automobile manufacturing processes, production flow, and cost management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2022 – Present</div>
+                <h3 class="timeline-title">Content Creator & Manager</h3>
+                <p class="timeline-company">YouTube & Facebook Platforms</p>
+                <div class="timeline-desc">
+                    <p>Managing three YouTube channels with one successfully monetized, creating animated story-based content.</p>
+                    <ul>
+                        <li>Channels: DinRaat Stories, Bright Tales, Mana Telugu Kathalu</li>
+                        <li>Reduced AI video creation time from 4 days to 30-45 minutes through workflow optimization</li>
+                        <li>Managing video planning, story scripting, SEO optimization, and audience engagement</li>
+                        <li>Running parallel Facebook pages for content distribution and reach expansion</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <h3 class="timeline-title">Digital Marketing Intern</h3>
+                <p class="timeline-company">Millioner Track</p>
+                <div class="timeline-desc">
+                    <p>Gained foundational exposure to digital marketing strategies and execution.</p>
+                    <ul>
+                        <li>Learned fundamentals of digital marketing concepts and social media strategy</li>
+                        <li>Observed ad campaign structure and real-time marketing team workflows</li>
+                        <li>Gained hands-on exposure to content planning and platform optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">🎬</div>
+                <h3 class="project-title">AI Video Production Pipeline</h3>
+                <p class="project-desc">Built an automated workflow that reduced video creation time from 4 days to 30-45 minutes using multiple AI tools and automation platforms.</p>
+                <div class="project-tags">
+                    <span class="tag">AI Automation</span>
+                    <span class="tag">Video Production</span>
+                    <span class="tag">Workflow Optimization</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">📊</div>
+                <h3 class="project-title">Business Invoice Automation</h3>
+                <p class="project-desc">Created automated invoice formats and digital accounting systems for family business, reducing manual work and improving record maintenance efficiency.</p>
+                <div class="project-tags">
+                    <span class="tag">Automation</span>
+                    <span class="tag">Business Operations</span>
+                    <span class="tag">Excel</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🎯</div>
+                <h3 class="project-title">Multi-Channel Content Network</h3>
+                <p class="project-desc">Managing three YouTube channels and parallel Facebook pages, creating animated story content with consistent audience engagement and monetization.</p>
+                <div class="project-tags">
+                    <span class="tag">Content Creation</span>
+                    <span class="tag">YouTube</span>
+                    <span class="tag">SEO</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🛍️</div>
+                <h3 class="project-title">E-commerce Experiments</h3>
+                <p class="project-desc">Ran Meesho dropshipping business learning product handling, order processing, and platform operations without paid advertising.</p>
+                <div class="project-tags">
+                    <span class="tag">E-commerce</span>
+                    <span class="tag">Dropshipping</span>
+                    <span class="tag">Operations</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">💻</div>
+                <h3 class="project-title">Database Management Projects</h3>
+                <p class="project-desc">Completed Python, DataFrames, and MySQL projects as part of academic curriculum, developing skills in data handling and database operations.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Data Analysis</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">📝</div>
+                <h3 class="project-title">Short-term Ventures</h3>
+                <p class="project-desc">Started ads agency and worked in catering operations to gain diverse business experience and learn operational workflows across industries.</p>
+                <div class="project-tags">
+                    <span class="tag">Entrepreneurship</span>
+                    <span class="tag">Marketing</span>
+                    <span class="tag">Operations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <h2 class="section-title">Achievements & Competitions</h2>
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <div class="achievement-year">2024–2025</div>
+                <h3 class="achievement-title">IIM Ahmedabad Ad Making Competition</h3>
+                <p class="achievement-desc">Finalist in prestigious Ad Making Competition conducted by Indian Institute of Management Ahmedabad</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-year">2024–2025</div>
+                <h3 class="achievement-title">IIM Jammu Competition</h3>
+                <p class="achievement-desc">Participated in Online Ad Making Competition organized by Indian Institute of Management Jammu</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-year">2024–2025</div>
+                <h3 class="achievement-title">Loyola College Business Boardroom</h3>
+                <p class="achievement-desc">Competed in Business Boardroom Competition, gaining exposure to business discussions and strategic decision-making</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-year">2023–2024</div>
+                <h3 class="achievement-title">Economics Week Presentation</h3>
+                <p class="achievement-desc">Presented comprehensive Economics project during Economics Week, explaining concepts to teachers and students</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-year">2019–2020</div>
+                <h3 class="achievement-title">BYJU'S Discovery School Super League</h3>
+                <p class="achievement-desc">Participated in Season II, engaging in structured academic competitions focused on problem-solving and teamwork</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-year">2019–2025</div>
+                <h3 class="achievement-title">Carrom Championships</h3>
+                <p class="achievement-desc">Competed at Zonal and Inter-School levels, achieving 3rd position in Class XII Inter-School Senior Category</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming & Data</h3>
+                <div class="skill-list">
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">DataFrames</span>
+                    <span class="skill-item">MySQL</span>
+                    <span class="skill-item">Database Management</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>AI & Automation</h3>
+                <div class="skill-list">
+                    <span class="skill-item">ChatGPT</span>
+                    <span class="skill-item">VEO 3</span>
+                    <span class="skill-item">FlowAI</span>
+                    <span class="skill-item">Blackbox AI</span>
+                    <span class="skill-item">Comet</span>
+                    <span class="skill-item">Perplexity</span>
+                    <span class="skill-item">Lovable</span>
+                    <span class="skill-item">Zapier</span>
+                    <span class="skill-item">n8n</span>
+                    <span class="skill-item">Gamma</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Design & Video Editing</h3>
+                <div class="skill-list">
+                    <span class="skill-item">Canva</span>
+                    <span class="skill-item">PicsArt</span>
+                    <span class="skill-item">PixelLab</span>
+                    <span class="skill-item">Alight Motion</span>
+                    <span class="skill-item">VN</span>
+                    <span class="skill-item">Kinemaster</span>
+                    <span class="skill-item">Adobe Suite</span>
+                    <span class="skill-item">Figma</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Business & Marketing</h3>
+                <div class="skill-list">
+                    <span class="skill-item">Digital Marketing</span>
+                    <span class="skill-item">SEO Optimization</span>
+                    <span class="skill-item">Content Strategy</span>
+                    <span class="skill-item">Social Media Management</span>
+                    <span class="skill-item">Accounting</span>
+                    <span class="skill-item">Business Operations</span>
+                    <span class="skill-item">E-commerce</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Office & Productivity</h3>
+                <div class="skill-list">
+                    <span class="skill-item">MS Excel</span>
+                    <span class="skill-item">MS Word</span>
+                    <span class="skill-item">PowerPoint</span>
+                    <span class="skill-item">Google Docs</span>
+                    <span class="skill-item">CAD (Basic)</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Creative & Soft Skills</h3>
+                <div class="skill-list">
+                    <span class="skill-item">Story Writing</span>
+                    <span class="skill-item">Script Writing</span>
+                    <span class="skill-item">Video Concept Planning</span>
+                    <span class="skill-item">Communication</span>
+                    <span class="skill-item">Quick Learning</span>
+                    <span class="skill-item">Adaptability</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <h3 class="education-degree">Entrepreneurship & Venture Building</h3>
+                <p class="education-institution">Institute of Venture Building (IVB)</p>
+                <p class="education-duration">Ongoing</p>
+                <div class="education-details">
+                    <p>Structured learning program focused on entrepreneurship, startup thinking, and venture execution. Gaining exposure to startup ecosystems, innovation methods, business fundamentals, and applied learning models.</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <h3 class="education-degree">Undergraduate Degree (Online)</h3>
+                <p class="education-institution">Jain University</p>
+                <p class="education-duration">Ongoing</p>
+                <div class="education-details">
+                    <p>Pursuing online undergraduate degree alongside professional activities. Developing self-discipline, time management, and independent academic learning skills through remote education.</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <h3 class="education-degree">Senior Secondary (Commerce)</h3>
+                <p class="education-institution">Andhra Education Society, New Delhi</p>
+                <p class="education-duration">April 2023 – March 2025 | CBSE</p>
+                <div class="education-details">
+                    <p><strong>Subjects:</strong> Accountancy, Business Studies, Economics, English, Informatics Practices</p>
+                    <p>Completed Python programming, DataFrames data handling, and MySQL database projects. Presented Economics project during Economics Week.</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <h3 class="education-degree">Secondary Education</h3>
+                <p class="education-institution">Andhra Education Society, New Delhi</p>
+                <p class="education-duration">April 2011 – March 2023 | CBSE</p>
+                <div class="education-details">
+                    <p>Comprehensive education including Mathematics, Science, Social Science, Computer Applications, IT, and multiple languages (English, Hindi, Telugu).</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <h3 class="education-degree">Professional Certifications</h3>
+                <p class="education-institution">Coursera</p>
+                <p class="education-duration">2025</p>
+                <div class="education-details">
+                    <ul>
+                        <li>Getting Started with Microsoft Excel</li>
+                        <li>Build a Free Website with WordPress</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-content">
+            <p style="font-size: 1.3rem; color: #ccc; margin-bottom: 2rem;">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 <a href="mailto:bvamshi488@gmail.com?subject=Contact%20from%20Website" target="_blank" rel="noopener noreferrer">bvamshi488@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    📞 <a href="tel:+919205304305">+91 92053 04305</a>
+                </div>
+                <div class="contact-item">
+                    💬 <a href="https://wa.me/919205304305" target="_blank" rel="noopener noreferrer">WhatsApp Chat</a>
+                </div>
+                <div class="contact-item">
+                    📍 Ghaziabad, Uttar Pradesh, India
+                </div>
+            </div>
+            <div class="cta-buttons" style="margin-top: 3rem; gap:1rem;">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bvamshi488@gmail.com&su=Contact%20from%20Website" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="border-color:var(--accent); color:var(--accent);">Send Email</a>
+                <a href="https://wa.me/919205304305" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Message on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Buddla Vamshi. Building the future, one project at a time.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .skill-category, .education-card, .achievement-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
